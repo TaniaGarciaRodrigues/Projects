@@ -1,0 +1,11 @@
+CREATE DATABASE Desporto2;
+CREATE TABLE Desporto2.Marcas(
+Marca2 INT(4) PRIMARY KEY,
+NomeMarca2 varchar(100)NOT NULL
+)
+
+INSERT INTO Desporto2.Marcas(Marca2,NomeMarca2)
+  VALUES ('1','Nike'),('2','Adidas'),('3','Reebok');
+
+SELECT * FROM Desporto2.Marcas
+WHERE NomeMarca2 LIKE '%Nike%';
