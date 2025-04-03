@@ -1,0 +1,22 @@
+import java.util.Scanner; //Importa a classe Scanner
+
+public class shareTheBill {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); //Cria um objeto scanner para ler a entrada
+        System.out.println("Qual Ã© o subtotal da conta?: ");
+        double subtotal = scanner.nextDouble(); //Ler o valor inserido do subtotal
+        System.out.println("Qual Ã© a taxa da conta (apresenta em %)?: ");
+        double tax = scanner.nextDouble();
+        double total = subtotal + subtotal*tax/100;
+        System.out.println("O total da conta Ã©: " + total);
+
+        System.out.print("Quantas pessoas vÃ£o dividir? ");
+        int numeroPessoas = scanner.nextInt();
+
+        double perPerson = total / numeroPessoas;
+        System.out.println("Cada pessoa irÃ¡ pagar: " + perPerson);
+
+        scanner.close();
+
+    }
+}
